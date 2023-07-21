@@ -4,13 +4,15 @@
 This configuration allows for Tauri (Rust) development inside a Dev Container without having to manually install all the neeeded dependencies and extensions, and wire up all launch and debugging commands.
 
 ## Usage
-Clone the configuration and start a new project using `cargo create-tauri-app` inside the container: this will create a new folded in your workspace with your `<app-name>`. 
-Copy all the content of your `<app-name>`'s folded to the root folded: all configuration assume your files are in the root directory (at the same level as the `.devcontainer` folder).
+Clone the configuration and start a new project using `cargo create-tauri-app` inside the container: this will create a new folder in your workspace with your `<app-name>`. 
+Copy all the content of your `<app-name>`'s folded to the root folder: all configuration assumes your files are in the root directory (at the same level as the `.devcontainer` folder).
+
+Then run `npm install` to fetch all Node dependencies.
 
 ## Content
 The content of the `.devcontainer` folder contains:
-- a `Dockerfile` for configuring a container using Debian 12 with a Rust and Node development environment
-- a `devcontainer.json` for setting up all needed extensions for Rust and Tauri development and all VSCode tasks and launch configuration needed for running and debugging the tauri application without additionnal configuration.
+- a `Dockerfile` for starting a container using Debian 12 with a Rust and Node development environment
+- a `devcontainer.json` for setting up all needed extensions for Rust and Tauri development and all VSCode tasks and launch configuration needed for running and debugging the Tauri application without additionnal configuration.
 
 ## Tasks and launch configuration
 The `devcontainer.json` contains 3 launch configurations:
