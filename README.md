@@ -1,11 +1,13 @@
 # Dev container configuration for Tauri (Rust)
 
 ## Introduction
-This configuration allows for Tauri (Rust) development inside a Dev Container without having to manually install all the neeeded dependencies and extensions, and wire up all launch and debugging commands.
+This configuration allows for Tauri (Rust) development with a Javascript (Vanilla or Framework) Frontend inside a Dev Container without having to manually install all the neeeded dependencies and extensions, and wire up all launch and debugging commands.
 
 ## Usage
 Clone the configuration and start a new project using `cargo create-tauri-app` inside the container: this will create a new folder in your workspace with your `<app-name>`. 
 Copy all the content of your `<app-name>`'s folded to the root folder: all configuration assumes your files are in the root directory (at the same level as the `.devcontainer` folder).
+
+The configuration is meant to be used with `npm`, but the launch et task configurations can be modified to make it work with `yarn` or `pnpm`.
 
 Then run `npm install` to fetch all Node dependencies.
 
